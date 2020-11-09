@@ -30,8 +30,7 @@ class PipelineWorkflow:
     def write(self):
         if not self.sc is None:
             self.sc.write()
-        if not self.props is None:
-            self.props.write()
+        self.props.write()
         self.tc.write()
         self.wf.write()
 
@@ -99,7 +98,7 @@ class PipelineWorkflow:
             Job("wc")
             .add_args("-l", webpage)
             .add_inputs(webpage)
-            .set_stdout(count, register_replica=False)
+            .set_stdout(count, register_replica=True)
         )
 
         self.wf.add_jobs(curl_job, wc_job)
@@ -136,11 +135,12 @@ if __name__ == "__main__":
     workflow = PipelineWorkflow(args.output)
 
     if not args.skip_sites_catalog:
-        print("Creating workflow properties...")
-        workflow.create_pegasus_properties()
         print("Creating execution sites...")
         workflow.create_sites_catalog(args.execution_site_name)
 
+    print("Creating workflow properties...")
+    workflow.create_pegasus_properties()
+    
     print("Creating transformation catalog...")
     workflow.create_transformation_catalog(args.execution_site_name)
 

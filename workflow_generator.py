@@ -98,7 +98,7 @@ class PipelineWorkflow:
             Job("wc")
             .add_args("-l", webpage)
             .add_inputs(webpage)
-            .set_stdout(count, register_replica=True)
+            .set_stdout(count, stage_out=True, register_replica=True)
         )
 
         self.wf.add_jobs(curl_job, wc_job)

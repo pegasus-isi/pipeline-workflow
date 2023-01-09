@@ -2,7 +2,6 @@
 
 # Dependencies
 - Pegasus v5.0+
-- HTCondor v10.2+
 - Python 3.6+
 
 ![Pipeline](https://user-images.githubusercontent.com/36110304/210929365-0e2f20e1-48dc-48de-a0fd-a2873d1d9b0c.png)

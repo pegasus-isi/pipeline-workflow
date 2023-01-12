@@ -15,5 +15,6 @@
 # How to run the workflow?
 ```
 # Plan and run the workflow generator to create an abstract workflow for the given input files
-./plan.sh
+./workflow_generator.py 
+./plan.sh workflow.yaml
 ```

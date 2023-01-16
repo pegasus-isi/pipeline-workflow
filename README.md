@@ -4,7 +4,7 @@
 - Pegasus v5.0+
 - Python 3.6+
 
-![Pipeline](https://user-images.githubusercontent.com/36110304/210929365-0e2f20e1-48dc-48de-a0fd-a2873d1d9b0c.png)
+![pipeline-workflow](https://user-images.githubusercontent.com/36110304/212753866-b3fbb2b2-30ba-4c25-bf8c-816fadaadc8f.png)
 
 # File Description
 
